@@ -29,7 +29,6 @@ import pytest
 
 from flask import current_app, g
 from flask_appbuilder.security.sqla.models import Role
-from superset.daos.datasource import DatasourceDAO  # noqa: F401
 from superset.models.dashboard import Dashboard
 from superset import app, appbuilder, db, security_manager, viz
 from superset.connectors.sqla.models import SqlaTable

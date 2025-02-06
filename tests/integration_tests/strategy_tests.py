@@ -17,7 +17,6 @@
 # isort:skip_file
 """Unit tests for Superset cache warmup"""
 
-from unittest.mock import MagicMock  # noqa: F401
 from tests.integration_tests.fixtures.birth_names_dashboard import (
     load_birth_names_dashboard_with_slices,  # noqa: F401
     load_birth_names_data,  # noqa: F401
@@ -28,9 +27,6 @@ from sqlalchemy import String, Date, Float  # noqa: F401
 import pytest
 import pandas as pd  # noqa: F401
 
-from superset.models.slice import Slice  # noqa: F401
-from superset.utils.database import get_example_database  # noqa: F401
-
 from superset import db
 
 from superset.models.core import Log
@@ -39,7 +35,6 @@ from superset.tasks.cache import (
     DashboardTagsStrategy,
     TopNDashboardsStrategy,
 )
-from superset.utils.urls import get_url_host  # noqa: F401
 
 from tests.integration_tests.base_tests import SupersetTestCase
 from tests.integration_tests.constants import ADMIN_USERNAME

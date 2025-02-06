@@ -18,7 +18,6 @@ from unittest.mock import patch
 
 import pytest
 import yaml
-from flask import g  # noqa: F401
 
 from superset import db, security_manager
 from superset.commands.chart.create import CreateChartCommand

@@ -1756,7 +1756,6 @@ def test_email_dashboard_report_fails_uncaught_exception(
     and logs with uncaught exception
     """
     # setup screenshot mock
-    from smtplib import SMTPException  # noqa: F401
 
     screenshot_mock.return_value = SCREENSHOT_FILE
     email_mock.side_effect = Exception("Uncaught exception")
@@ -2045,9 +2044,6 @@ def test_fail_screenshot(screenshot_mock, email_mock, create_report_email_chart)
     """
     ExecuteReport Command: Test soft timeout on screenshot
     """
-    from celery.exceptions import SoftTimeLimitExceeded  # noqa: F401
-
-    from superset.commands.report.exceptions import AlertQueryTimeout  # noqa: F401
 
     screenshot_mock.side_effect = Exception("Unexpected error")
     with pytest.raises(ReportScheduleScreenshotFailedError):

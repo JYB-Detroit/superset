@@ -39,7 +39,6 @@ from superset.commands.database.validate import ValidateDatabaseParametersComman
 from superset.commands.exceptions import CommandInvalidError
 from superset.commands.importers.exceptions import IncorrectVersionError
 from superset.connectors.sqla.models import SqlaTable
-from superset.databases.schemas import DatabaseTestConnectionSchema  # noqa: F401
 from superset.databases.ssh_tunnel.models import SSHTunnel
 from superset.errors import ErrorLevel, SupersetError, SupersetErrorType
 from superset.exceptions import (

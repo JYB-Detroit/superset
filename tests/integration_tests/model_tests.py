@@ -22,7 +22,6 @@ import unittest
 from unittest import mock
 
 from superset import security_manager
-from superset.connectors.sqla.models import SqlaTable  # noqa: F401
 from superset.exceptions import SupersetException
 from superset.utils.core import override_user
 from tests.integration_tests.fixtures.birth_names_dashboard import (
@@ -32,11 +31,9 @@ from tests.integration_tests.fixtures.birth_names_dashboard import (
 
 import pytest
 from sqlalchemy.engine.url import make_url
-from sqlalchemy.types import DateTime  # noqa: F401
 
 import tests.integration_tests.test_app  # noqa: F401
 from superset import app, db as metadata_db
-from superset.db_engine_specs.postgres import PostgresEngineSpec  # noqa: F401
 from superset.common.db_query_status import QueryStatus
 from superset.models.core import Database
 from superset.models.slice import Slice

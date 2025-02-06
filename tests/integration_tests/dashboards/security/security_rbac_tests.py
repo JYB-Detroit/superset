@@ -17,7 +17,6 @@
 """Unit tests for Superset"""
 
 from unittest import mock
-from unittest.mock import patch  # noqa: F401
 
 import pytest
 
